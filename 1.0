@@ -20,7 +20,7 @@ int main ()
 		printf("------------- * ------------\n");
 	}
 
-	if(p='E')
+	if(p=='E')
 	{
 		printf("------------- * ------------\n");
 		printf("Use'#'to end this game!(￣.￣)+\n");
