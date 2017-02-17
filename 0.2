@@ -7,11 +7,26 @@ int main ()
 {
     void luna(int x);
     int i,v,total;
+	char p;
     srand(time(NULL));
-	printf("------------- * ------------\n");
-	printf("不想玩的时候戳#号键就行了(￣.￣)+\n");
-    printf("How many questions do you want?\n");
-	printf("------------- * ------------\n");
+	printf("Please choose your language:English or Chinese\n");
+	printf("C=Chinese, E=English.\n");
+	scanf("%c",&p);
+	if(p=='C')
+	{
+		printf("------------- * ------------\n");
+		printf("不想玩的时候戳#号键就行了(￣.￣)+\n");
+		printf("你想要多少题？\n");
+		printf("------------- * ------------\n");
+	}
+
+	if(p='E')
+	{
+		printf("------------- * ------------\n");
+		printf("Use'#'to end this game!(￣.￣)+\n");
+		printf("How many questions do you want?\n");
+		printf("------------- * ------------\n");
+	}
     scanf("%d",&total);
     for(i=0;i<total;i++)
         {
@@ -23,8 +38,16 @@ int main ()
 			  break;
 		  }
         }
-    printf("Right:%d\n",u);
-    printf("Wrong:%d",z);
+	if(p=='E')
+    {
+		printf("Right:%d\n",u);
+		printf("Wrong:%d",z);
+	}
+	if(p=='C')
+    {
+		printf("正确:%d\n",u);
+		printf("错误:%d",z);
+	}
     return 0;
 }
 void luna(int x)
