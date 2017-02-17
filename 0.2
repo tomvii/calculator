@@ -77,4 +77,44 @@ void luna(int x)
 		else
 			z++;
 	}
+		if(x==1)
+    {
+        printf("(%d+%d)*(%d-%d)=?\n",a,b,c,d);
+        right=(a+b)*(c-d);
+        scanf("%d",&answer);
+        if(answer==right)
+            u++;
+		else
+			z++;
+    }
+    if(x==2)
+    {
+        printf("(%d+%d)*(%d+%d)=?\n",a,b,c,d);
+        right=(a+b)*(c+d);
+        scanf("%d",&answer);
+        if(answer==right)
+            u++;
+		else
+			z++;
+    }
+     if(x==3)
+    {
+        printf("(%d-%d)*(%d+%d)=?\n",a,b,c,d);
+        right=(a-b)*(c+d);
+        scanf("%d",&answer);
+        if(answer==right)
+            u++;
+		else
+			z++;
+    }
+     if(x==4)
+    {
+        printf("(%d-%d)*(%d-%d)=?\n",a,b,c,d);
+        right=(a-b)*(c-d);
+        scanf("%d",&answer);
+        if(answer==right)
+            u++;
+		else
+			z++;
+    }
 }
