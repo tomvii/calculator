@@ -138,3 +138,73 @@ void luna(int x)
     }
      if(x==4)
     {
+ printf("(%d-%d)*(%d-%d)=?\n",a,b,c,d);
+        right=(a-b)*(c-d);
+        scanf("%d",&answer);
+        if(answer==right)
+            u++;
+		else
+			z++;
+    }
+     if(x==5)
+    {
+        while(a==0||b==0||d==0||c==0||c==d)
+		{
+			a=10*rand()/RAND_MAX;
+			b=10*rand()/RAND_MAX;
+			c=10*rand()/RAND_MAX;
+			d=10*rand()/RAND_MAX;
+		}
+		printf("(%d-%d)/(%d-%d)=?\n",a,b,c,d);
+        orgina = a-b;j=a-b;
+        orginb = c-d;k=c-d;
+        while(k != 0)
+       {
+        t= j%k;
+        j= k;
+        k= t;
+       }
+        scanf("%d/%d",&answer,&answert);
+		w=orgina/orginb;
+        if(answer==orgina/j&&answert==orginb/j)
+            u++;
+		else if(answer==w&&orgina%orginb==0)
+			u++;
+		else
+			z++;
+    }
+    if(x==6)
+    {
+        while(a==0||b==0||d==0||c==0||c==d)
+		{
+			a=10*rand()/RAND_MAX;
+			b=10*rand()/RAND_MAX;
+			c=10*rand()/RAND_MAX;
+			d=10*rand()/RAND_MAX;
+		}
+        printf("(%d+%d)/(%d-%d)=?\n",a,b,c,d);
+        orgina = a+b;j=a+b;
+        orginb = c-d;k=c-d;
+        while(k != 0)
+       {
+        t= j%k;
+        j= k;
+        k= t;
+       }
+        scanf("%d/%d",&answer,&answert);
+		w=orgina/orginb;
+        if(answer==orgina/j&&answert==orginb/j)
+            u++;
+		else if(answer==w&&orgina%orginb==0)
+			u++;
+		else
+			z++;
+    }
+    if(x==7)
+    {
+        while(a==0||b==0||d==0||c==0)
+		{
+			a=10*rand()/RAND_MAX;
+			b=10*rand()/RAND_MAX;
+			c=10*rand()/RAND_MAX;
+			d=10*rand()/RAND_MAX;
