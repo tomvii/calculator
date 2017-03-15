@@ -1,0 +1,70 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int u=0;
+int z=0;
+int main ()
+{
+    void luna(int x);
+	int i,v,total,m=0;
+	int w=0,p;
+	char o;
+	FILE *fp;
+	fp=fopen("in.txt","rb");
+	printf("0(ÖÐÎÄ)¡¡1(Enlish) 2(ÈÕ±¾ÕZ):");
+	scanf("%d",&p);
+	printf("*******************************************************\n");
+	if(!fp)
+	{
+		printf("can't open file\n");
+		exit(0);
+	}
+	while(!feof(fp))
+	{
+		if(p==1&&m==0)
+		{
+			fseek(fp,24*sizeof(char),0);
+			m=1;
+		}
+		if(p==2&&m==0)
+		{
+			fseek(fp,58*sizeof(char),0);
+			m=1;
+		}
+		if(p==0&&w==22)break;
+		if(p==1&&w==32)break;
+		if(p==2&&w==48)break;
+		fread(&o,sizeof(char),1,fp);
+		printf("%c",o);
+		w++;
+	}
+printf("\n*******************************************************\n");
+    srand(time(NULL));
+    scanf("%d",&total);
+    for(i=0;i<total;i++)
+        {
+          v=11*rand()/RAND_MAX;
+          luna(5);
+		  if(getchar()=='#')
+		  {
+			  z--;
+			  break;
+		  }
+        }
+    printf("Right:%d\n",u);
+    printf("Wrong:%d",z);
+	fclose(fp);
+    return 0;
+}
+void luna(int x)
+{
+	int orgina,orginb;
+    int a,b,c,d,multiple,factor,result,right,numerator,answer,answert,y1,y2,t,j,k,w;
+    a=10*rand()/RAND_MAX;
+    b=10*rand()/RAND_MAX;
+    c=10*rand()/RAND_MAX;
+    d=10*rand()/RAND_MAX;
+	if(x==0)
+	{
+		while(a==0||b==0||d==0||c==0)
